@@ -18,14 +18,6 @@ module.exports = {
     optimization: {
         runtimeChunk: 'single',
     },
-    devServer: {
-        static: './dist',
-        open: true,
-        hot: true,
-        port: 3000,
-        compress: true,
-        historyApiFallback: true
-    },
     module: {
         rules: [
             {
