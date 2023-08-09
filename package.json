@@ -4,7 +4,9 @@
   "description": "Starter code template to manage css styles more efficently with the 7:1 architectural workflow.",
   "main": "index.html",
   "scripts": {
-    "dev": "webpack"
+    "start": "webpack serve",
+    "prod": "webpack --config webpack.production.config.js",
+    "dev": "webpack serve --config webpack.dev.config.js"
   },
   "repository": {
     "type": "git",
@@ -19,13 +21,23 @@
   "author": "Eshwa Gadkar",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "handlebars-loader": "^1.7.3",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
     "postcss-loader": "^7.3.3",
     "sass": "^1.64.2",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
-    "autoprefixer": "^10.4.14"
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
