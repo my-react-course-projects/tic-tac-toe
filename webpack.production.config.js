@@ -11,7 +11,8 @@ module.exports = {
         // print: './src/scripts/print.js'
     }, 
     output: {
-        filename: '[name].bundle.[contenthash].js',
+        // filename: '[name].bundle.[contenthash].js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
         // clean: true,
     },
@@ -44,7 +45,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Project Title',
             // filename: '../index.html'
-            template: 'src/index.hbs',
+            template: 'src/template.hbs',
             // description: 'Some Description'
             // meta: { description: 'Some description'}
         }),
