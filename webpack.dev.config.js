@@ -54,7 +54,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Project Title',
             // filename: '../index.html'
-            template: 'src/index.hbs',
+            template: 'src/template.hbs',
             // description: 'Some Description'
             // meta: { description: 'Some description'}
         }),
