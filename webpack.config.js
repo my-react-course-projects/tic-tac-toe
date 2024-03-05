@@ -97,7 +97,7 @@ module.exports = () => {
     } else {  
         config.mode = 'development';
         config.devServer = {
-            static: `./${sourceDir}/` ,
+            static: `./${buildDir}/` ,
             watchFiles: [`./${sourceDir}/index.hbs`],
             hot: true,
             port,
