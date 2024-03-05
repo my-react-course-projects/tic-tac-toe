@@ -38,7 +38,7 @@ const config = {
                 exclude: /node_modules/,
                 use: { loader: 'babel-loader',
                  options: {
-                    presets: ['@babel/preset-env']
+                    presets: ['@babel/preset-react', '@babel/preset-env']
                    }
                 },
             },
@@ -98,7 +98,7 @@ module.exports = () => {
         config.mode = 'development';
         config.devServer = {
             static: `./${buildDir}/` ,
-            watchFiles: [`./${sourceDir}/index.hbs`],
+            // watchFiles: [`./${sourceDir}/index.hbs`],
             hot: true,
             port,
             open: true,
