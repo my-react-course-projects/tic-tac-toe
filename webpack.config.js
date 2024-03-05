@@ -70,9 +70,9 @@ const config = {
         //     ]
         // }),
         new HtmlWebpackPlugin({
-            title: 'Sunny-Side-Landing-Page',
+            title: 'Update this accordingly...',
             template: `./${sourceDir}/index.hbs`,
-            description: 'Some Description'
+            description: 'Some Description of your choice'
         })
     ],
     optimization: {
