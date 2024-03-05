@@ -4,9 +4,8 @@
   "description": "Starter code template to manage css styles more efficently with the 7:1 architectural workflow.",
   "main": "index.html",
   "scripts": {
-    "start": "webpack serve",
-    "prod": "webpack --config webpack.production.config.js",
-    "dev": "webpack serve --config webpack.dev.config.js"
+    "prod": "webpack --mode=production --node-env=production",
+    "dev": "webpack serve --mode=development --node-env=development --hot"
   },
   "repository": {
     "type": "git",
