@@ -21,8 +21,8 @@
   "license": "MIT",
   "config": {
     "entry": "app",
-    "sourceDir": "app/src",
-    "buildDir": "app/dist",
+    "sourceDir": "src",
+    "buildDir": "docs",
     "port": "3001"
   },
   "devDependencies": {
