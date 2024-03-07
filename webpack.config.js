@@ -70,9 +70,9 @@ const config = {
         //     ]
         // }),
         new HtmlWebpackPlugin({
-            title: 'Update this accordingly...',
+            title: 'Tic-Tac-Toe',
             template: `./${sourceDir}/index.hbs`,
-            description: 'Some Description of your choice'
+            description: 'Tic Tac Toe using React'
         })
     ],
     optimization: {

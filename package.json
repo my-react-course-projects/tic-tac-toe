@@ -1,15 +1,15 @@
 {
-  "name": "7-1-architecture-workflow-template",
+  "name": "tic-tac-toe",
   "version": "1.0.0",
-  "description": "Starter code template to manage css styles more efficently with the 7:1 architectural workflow.",
-  "main": "index.html",
+  "description": "Tic Tac Toe using React concepts.",
+  "main": "index.js",
   "scripts": {
     "prod": "webpack --mode=production --node-env=production",
     "dev": "webpack serve --mode=development --node-env=development --hot"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com-eshwagadkar:eshwagadkar/7-1-architecture-workflow-template.git"
+    "url": "git@github.com:my-react-course-projects/tic-tac-toe.git"
   },
   "keywords": [
     "html",
