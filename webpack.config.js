@@ -11,7 +11,7 @@ const isProduction = process.env.NODE_ENV == 'production'
 const pkgVars = require('./package.json')
 
 // Destructure variables from pkgVars.config
-const {entry, sourceDir, buildDir, port} = pkgVars.config
+const {sourceDir, buildDir, port} = pkgVars.config
 
 const browserCacheHandler = isProduction ? 'bundle.[contenthash].js' : 'bundle.js'
 const outputBundleHandler = isProduction ? buildDir : sourceDir
