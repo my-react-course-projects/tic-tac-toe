@@ -90,7 +90,7 @@ module.exports = () => {
         config.plugins.push(
             new MiniCssExtractPlugin({ filename: 'styles.[contenthash].css' }), 
             new CleanWebpackPlugin(),
-            // new RunAfterCompile()
+            new RunAfterCompile()
         ); 
         config.optimization.minimizer.push(new CssMinimizerPlugin())
     // DEVELOPMENT CONFIG
