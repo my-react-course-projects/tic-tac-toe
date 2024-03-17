@@ -9,11 +9,11 @@ export default ({ initialName, symbol }) => {
       setPlayerName(event.target.value)
     }
 
-    let editablePlayerName = <span className='player__name'>{playerName}</span>
+    let editablePlayerName = <span className='player-name'>{playerName}</span>
     let buttonCaption = 'Edit'
 
     if(edit) { 
-      editablePlayerName = <input className='player__input' type='text' value={playerName} onChange={inputChangeHandler} required />
+      editablePlayerName = <input className='player-input' type='text' value={playerName} onChange={inputChangeHandler} required />
       buttonCaption = 'Save'
     }
 
@@ -21,7 +21,7 @@ export default ({ initialName, symbol }) => {
         <li>
           <span className="player">
             { editablePlayerName }
-            <span className='player__symbol'>{symbol}</span>
+            <span className='player-symbol'>{symbol}</span>
           </span>
           <button onClick={clickHandler}>{buttonCaption}</button>
         </li>
