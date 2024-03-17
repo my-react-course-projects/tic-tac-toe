@@ -1,3 +1,11 @@
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
 html {
     font-family: 'Roboto Slab', sans-serif;
     line-height: 1.5;
@@ -12,12 +20,13 @@ html {
   }
   
   body {
+    box-sizing: border-box;
     background: radial-gradient(
         circle at top,
         rgba(241, 210, 70, 0.98),
         rgba(250, 176, 103, 0.87)
       ),
-      url('~/src/images/bg-pattern-dark.png');
+      url('~/src/assets/images/bg-pattern-dark.png');
     background-repeat: repeat;
     background-size: 100% 100%, 30% 30%, 100% 100%;
     min-height: 110rem;

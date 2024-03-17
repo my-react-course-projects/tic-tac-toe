@@ -10,10 +10,9 @@
 
 @import "components/button";
 
-
-@import "layout/main";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
+@import "layouts/grid";
+@import "layouts/header";
+@import "layouts/main";
+@import "layouts/footer";
 
 @import "pages/home";
