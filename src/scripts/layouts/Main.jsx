@@ -1,5 +1,6 @@
 import React from 'react'
 import Player from '../components/Player.jsx'
+import GameBoard from '../components/GameBoard.jsx'
 
 export default () => {
 
@@ -12,7 +13,9 @@ export default () => {
                         {/* Player 2 */}
                         <Player initialName='Player 2' symbol='O' />
                     </ol>
+                    <GameBoard />
                 </div>
+                LOG
             </main>
         </>
 }
