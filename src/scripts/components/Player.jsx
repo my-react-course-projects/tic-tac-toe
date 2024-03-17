@@ -3,11 +3,15 @@ import React, { useState } from 'react'
 export default ({ name, symbol }) => {
 
     const [edit, setEdit] = useState(false)
-    const clickHandler = () => setEdit(true)
+    const clickHandler = () => setEdit(prevState => !edit)
 
     let playerName = <span className='player__name'>{name}</span>
+    let buttonCaption = 'Edit'
 
-    if(edit) { playerName = <input type='text' required /> }
+    if(edit) { 
+      playerName = <input className='player__input' type='text' required />
+      buttonCaption = 'Save'
+    }
 
     return (
         <li>
@@ -15,7 +19,7 @@ export default ({ name, symbol }) => {
             { playerName }
             <span className='player__symbol'>{symbol}</span>
           </span>
-          <button onClick={clickHandler}>Edit</button>
+          <button onClick={clickHandler}>{buttonCaption}</button>
         </li>
     )
 }
