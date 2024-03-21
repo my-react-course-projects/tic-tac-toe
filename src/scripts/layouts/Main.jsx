@@ -8,18 +8,19 @@ export default () => {
     const [activePlayer, setActivePlayer] = useState('X')
 
     const handleSelectSquare = (rowIndex, colIndex) => {
-        setActivePlayer((currentActivePlayer) => currentActivePlayer === 'X' ? 'O' : 'X')
+        setActivePlayer((currentActivePlayer) => (currentActivePlayer === 'X' ? 'O' : 'X'))
         setGameTurns((prevTurns) => {
 
             let currentPlayer = 'X'
 
-            if( gameTurns.length > 0 && prevTurns[0].player === 'X') {
+            if(prevTurns.length > 0 && prevTurns[0].playerSymbol === 'X') {
                 currentPlayer = 'O'
             }
 
-            const updatedTurns = [ { squareGB: { row: rowIndex, col: colIndex }, 
-                                     playerSymbol: currentPlayer }, ...prevTurns
-                                 ]
+            const updatedTurns = [ 
+                { squareGB: { row: rowIndex, col: colIndex }, playerSymbol: currentPlayer },
+                 ...prevTurns
+            ]
             return updatedTurns
         })
     } 
