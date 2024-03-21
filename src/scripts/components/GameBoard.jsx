@@ -6,7 +6,16 @@ const initialGameBoard = [
     [null, null, null]
 ]
 
-export default ({ onSelectSquare }) => {
+export default ({ onSelectSquare, turns }) => {
+
+    const gameBoard = initialGameBoard
+
+    for(const turn of turns) {
+      const { squareGB, playerSymbol } = turn
+      const { row, col } = squareGB
+
+      gameBoard[row][col] = playerSymbol
+    }
 
     // const [gameBoard, setGameBoard] = useState(initialGameBoard)
 
@@ -28,7 +37,7 @@ export default ({ onSelectSquare }) => {
                 {row.map((playerSymbol, colIndex) => (
                     <li key={colIndex}>
                         {/* <button onClick={() => handleSelectedSquare(rowIndex, colIndex)}>{playerSymbol}</button> */}
-                        <button onClick={onSelectSquare}>{playerSymbol}</button>
+                        <button onClick={() => onSelectSquare(rowIndex, colIndex)}>{playerSymbol}</button>
                     </li>
                 ))}
             </ol>

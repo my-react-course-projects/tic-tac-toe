@@ -7,7 +7,7 @@ export default () => {
     const [gameTurns, setGameTurns] = useState([])
     const [activePlayer, setActivePlayer] = useState('X')
 
-    const handleSelectSquare = () => {
+    const handleSelectSquare = (rowIndex, colIndex) => {
         setActivePlayer((currentActivePlayer) => currentActivePlayer === 'X' ? 'O' : 'X')
         setGameTurns((prevTurns) => {
 
@@ -17,10 +17,9 @@ export default () => {
                 currentPlayer = 'O'
             }
 
-            const updatedTurns = [ { square: { row: rowIndex, col: colIndex }, 
-                                     player: currentPlayer }, ...prevTurns
+            const updatedTurns = [ { squareGB: { row: rowIndex, col: colIndex }, 
+                                     playerSymbol: currentPlayer }, ...prevTurns
                                  ]
-                                 
             return updatedTurns
         })
     } 
@@ -34,7 +33,10 @@ export default () => {
                         {/* Player 2 */}
                         <Player initialName='Player 2' symbol='O' isActive={ activePlayer === 'O'} />
                     </ol>
-                    <GameBoard onSelectSquare={handleSelectSquare} activePlayerSymbol={activePlayer} />
+                    <GameBoard 
+                      onSelectSquare={handleSelectSquare} 
+                      turns={gameTurns}
+                    />
                 </div>
                 <Log />
             </main>
